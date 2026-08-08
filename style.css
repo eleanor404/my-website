@@ -489,34 +489,6 @@ footer nav a {
   color: var(--burgundy-dark);
 }
 
-@media (max-width: 600px) {
-  .mountains-section {
-    margin: 40px auto;
-    padding: 0 15px;
-  }
-
-  .mountains-table th,
-  .mountains-table td {
-    padding: 11px 12px;
-  }
-}
-
-@media (max-width: 600px) {
-  .mountains-section {
-    padding: 0 15px;
-    margin: 40px auto;
-  }
-
-  .mountains-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .mountains-table th,
-  .mountains-table td {
-    padding: 11px 12px;
-  }
-}
-
 .archive-book {
   display: block;
   width: 560px;
@@ -610,6 +582,21 @@ footer nav a {
       "five";
     grid-template-columns: 1fr;
   }
+	@media (max-width: 600px) {
+  .mountains-section {
+    padding: 0 15px;
+    margin: 40px auto;
+  }
+
+  .mountains-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .mountains-table th,
+  .mountains-table td {
+    padding: 11px 12px;
+  }
+}
 	  .archive-book {
   display: block;
   width: 100%;
