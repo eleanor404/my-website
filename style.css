@@ -294,6 +294,7 @@ nav a {
 .four h3 {
   color: var(--white);
 }
+
 header {
     position: static;
     height: auto;
@@ -413,6 +414,109 @@ footer nav a {
     float: right;
     margin: 15px;
 }
+/* table */
+.mountains-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 30px;
+}
+
+.mountains-section h2 {
+  margin-bottom: 25px;
+  color: var(--burgundy-dark);
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mountains-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--paper-light);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.mountains-table th,
+.mountains-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.mountains-table th {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.mountains-table tbody tr:nth-child(even) {
+  background-color: var(--paper);
+}
+
+.mountains-table tbody tr:hover {
+  background-color: var(--border);
+}
+
+.mountains-table td:first-child {
+  width: 70px;
+  font-weight: bold;
+  color: var(--burgundy);
+}
+
+.mountains-table td:nth-child(2) {
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+
+.wainwright-info {
+  margin-top: 22px;
+  padding: 18px 20px;
+  background-color: var(--paper-light);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--gold);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.wainwright-info a {
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
+.wainwright-info a:hover {
+  color: var(--burgundy-dark);
+}
+
+@media (max-width: 600px) {
+  .mountains-section {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+
+  .mountains-table th,
+  .mountains-table td {
+    padding: 11px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mountains-section {
+    padding: 0 15px;
+    margin: 40px auto;
+  }
+
+  .mountains-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .mountains-table th,
+  .mountains-table td {
+    padding: 11px 12px;
+  }
+}
+
 /* --- Medium Screens: Tablets (481px to 768px) --- */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   body {
