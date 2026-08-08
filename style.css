@@ -423,7 +423,7 @@ footer nav a {
 
 .mountains-section h2 {
   margin-bottom: 25px;
-  color: var(--burgundy-dark);
+  color: var(--paper-light);
 }
 
 .table-container {
@@ -468,25 +468,6 @@ footer nav a {
 .mountains-table td:nth-child(2) {
   font-weight: 600;
   color: var(--teal-dark);
-}
-
-.wainwright-info {
-  margin-top: 22px;
-  padding: 18px 20px;
-  background-color: var(--paper-light);
-  border: 1px solid var(--border);
-  border-left: 5px solid var(--gold);
-  color: var(--ink);
-  line-height: 1.7;
-}
-
-.wainwright-info a {
-  color: var(--burgundy);
-  font-weight: 600;
-}
-
-.wainwright-info a:hover {
-  color: var(--burgundy-dark);
 }
 
 .archive-book {
