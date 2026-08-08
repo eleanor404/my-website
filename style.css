@@ -352,9 +352,39 @@ footer nav a {
 /* Medium Screens */
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  header {
-    border-bottom-color: #ccc;
+ header {
+    padding: 0 18px;
   }
+
+  header nav {
+    padding: 10px 0;
+  }
+
+  header nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  header nav li {
+    display: block;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header nav li:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  header nav li:not(:last-child)::after {
+    display: none;
+  }
+
+  header nav a {
+    padding: 10px 12px;
+    font-size: 0.72rem;
+    text-align: left;
+  }
+}
 
   .agrid {
     grid-template-areas:
