@@ -9,23 +9,34 @@
 
   --gold: #8a6500;
 
-  --lavender-dark: #514875;
+  --teal: #4d6b73;
   --teal-dark: #39545a;
+
+  --lavender: #675d95;
+  --lavender-dark: #514875;
+
+  --olive: #66731e;
   --olive-dark: #4d5817;
 
+  --sage: #5f6f54;
+  --sea: #4e7773;
+
+  --orange: #a35c1e;
+  --taupe: #7d6b4a;
+
   --white: #fffdf8;
+
   --border: #d8cdbc;
 }
 
-
-/* Grid */
-
+/* Grid for body */
 body {
   display: grid;
   grid-template-areas:
     "header"
     "main"
     "footer";
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 
   min-height: 100vh;
@@ -39,9 +50,17 @@ body {
   color: var(--ink);
 }
 
+header {
+  grid-area: header;
+  background-color: var(--paper);
+  border-bottom: 2px solid var(--border);
+  padding: 20px;
 
-/* Header and Nav */
-
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+}
 header {
   grid-area: header;
   background-color: var(--paper);
@@ -107,72 +126,111 @@ header nav a:focus-visible {
   outline-offset: 5px;
 }
 
-/* main articles grid */
-
 main {
   grid-area: main;
   background-color: var(--paper-light);
 }
 
+footer {
+  grid-area: footer;
+  background: #ddd;
+  padding: 5px;
+}
+nav {
+    display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 12px;
+	margin: 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+/* Grid for main articles */
 .agrid {
   display: grid;
-
   grid-template-areas:
     "open open"
     "one two"
     "five five"
     "three four";
-
   grid-template-columns: 1fr 1fr;
   gap: 2px;
 }
-
-
-/* hero */
+/* main grid Areas */
 
 .open {
   grid-area: open;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  min-height: 50px;
-  max-height: 150px;
-  padding: 0;
-
-  background-image: url("images/aview.jpeg");
+    background-image:
+    url("images/aview.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   color: white;
+  min-height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.open h1 {
-  place-self: center;
-
-  font-size: 5vw;
-  font-family: "snell-roundhand-lt-std", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.one {
+  grid-area: one;
+  background: red;
 }
 
+.two {
+  grid-area: two;
+  background: yellow;
+}
 
-/* main articles */
+.three {
+  grid-area: three;
+  background: blue;
+}
 
-.agrid article {
-  box-sizing: border-box;
+.four {
+  grid-area: four;
+  background: green;
+}
 
+.five {
+  grid-area: five;
+  background-image:
+    url("images/Buttermere.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
   padding: 30px;
+  min-height: 300px;
 
-  border: 1px solid rgba(41, 38, 35, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
 
-  line-height: 1.7;
-
-  box-shadow: 0 4px 12px rgba(41, 38, 35, 0.08);
+/* style stuff */
+.agrid article {
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid rgba(41, 38, 35, 0.15);
+    line-height: 1.7;
+    box-shadow: 0 4px 12px rgba(41, 38, 35, 0.08)
 }
-
 .agrid article h2 {
   margin-top: 0;
   margin-bottom: 18px;
@@ -188,15 +246,12 @@ main {
   margin-bottom: 8px;
 
   font-family: "legitima", Georgia, serif;
+  font-size: .rem;
 }
-
-
-/* Article style */
 
 .one {
   grid-area: one;
-
-  background-color: var(--burgundy-dark);
+  background-color: var(--burgundy);
   color: var(--white);
 }
 
@@ -204,24 +259,22 @@ main {
 .one h3 {
   color: var(--white);
 }
-
-
 .two {
   grid-area: two;
-
   background-color: #e3dfef;
   color: var(--ink);
 }
 
-.two h2,
+.two h2 {
+  color: var(--lavender-dark);
+}
+
 .two h3 {
   color: var(--lavender-dark);
 }
 
-
 .three {
   grid-area: three;
-
   background-color: var(--teal-dark);
   color: var(--white);
 }
@@ -231,10 +284,8 @@ main {
   color: var(--white);
 }
 
-
 .four {
   grid-area: four;
-
   background-color: var(--olive-dark);
   color: var(--white);
 }
@@ -243,184 +294,201 @@ main {
 .four h3 {
   color: var(--white);
 }
+header {
+    position: static;
+    height: auto;
 
+    border-right: none;
+    padding: 15px;
+  }
 
-.five {
-  grid-area: five;
+  nav ul {
+    grid-auto-flow: column;
+    justify-content: space-around;
+    gap: 0;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  min-height: 300px;
-  padding: 30px;
-
-  background-image: url("images/Buttermere.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  color: white;
+  nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+nav a {
+  color: var(--burgundy-dark);
+  text-decoration: none;
+  font-family: "helvetica-lt-pro", Arial, sans-serif;
+  font-weight: 700;
 }
-
-
-/* Img */
-
-.home {
-  max-width: 50%;
-  float: right;
-  margin: 15px;
-}
-
-
-/* Poem */
-
-.poem {
-  place-self: center;
-}
-
-.poem ul,
-.poem ol {
-  list-style-type: none;
-}
-
-.poem li {
-  font-family: "Times New Roman", serif;
-  font-style: italic;
-  padding-bottom: 0.1em;
-}
-
-.poem li:first-child::first-letter {
-  font-size: 26px;
-  font-style: italic;
-  padding-right: 3px;
-}
-
-.poem li:not(:first-child) {
-  margin-left: 26px;
-}
-
-
-/* Footer */
-
 footer {
   grid-area: footer;
-
   background-color: var(--burgundy-dark);
-  color: var(--paper);
-
-  padding: 28px 40px 20px;
+  color: var(--white);
+  padding: 15px 25px;
   margin-top: 2px;
+}
+/* poem */
+.poem {
+    place-self: center;
+}
+.poem ul, .poem ol
+{
+    list-style-type: none;
+}
+.poem li
+{
+  font-family:Times New Roman;
+  font-style:italic;
+  padding-bottom: 0.1em;
+}
+.poem li:first-child::first-letter
+{
+  font-size:26px;
+  font-style:italic;
+  padding-right:3px;
+}
+.poem li:not(:first-child)
+{
+  margin-left: 26px;
+}
+.open h1 {
+    place-self: center;
+    font-size: 5vw;
+    font-family: "snell-roundhand-lt-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.open {
+    grid-area: open;
+    padding: 0;
+    max-height: 150px;
+    background-image: url("images/aview.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer {
+    grid-area: footer;
+    background-color: var(--burgundy-dark);
+    color: var(--paper);
+    padding: 28px 40px 20px;
+    margin-top: 2px;
+    border-top: 2px solid var(--gold);
 
-  border-top: 2px solid var(--gold);
-
-  font-family: "helvetica-lt-pro", Arial, sans-serif;
+    font-family: "helvetica-lt-pro", Arial, sans-serif;
 }
 
 footer nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
 
-  gap: 10px;
-
-  list-style: none;
-  padding: 5px;
-  margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 footer nav li {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
-
 footer nav a {
-  color: var(--paper);
+    color: var(--paper);
+    text-decoration: none;
 
-  text-decoration: none;
-
-  font-family: "helvetica-lt-pro", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-/* large */
-@media screen and (min-width: 769px) {
-  .agrid {
-    display: grid;
-
-    grid-template-areas:
-      "open open"
-      "one two"
-      "five five"
-      "three four";
-
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-  }
+    font-family: "helvetica-lt-pro", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase; 
 }
 
-/* Medium Screens */
-
+.home {
+    max-width: 50%;
+    float: right;
+    margin: 15px;
+}
+/* --- Medium Screens: Tablets (481px to 768px) --- */
 @media screen and (min-width: 481px) and (max-width: 768px) {
- header {
-    padding: 0 18px;
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
   }
 
-  header nav {
-    padding: 10px 0;
+  header {
+    position: static;
+    height: auto;
+
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
   }
 
-  header nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+  nav ul {
+    grid-auto-flow: column;
+    justify-content: space-around;
+    gap: 0;
   }
 
-  header nav li {
+  nav a {
     display: block;
-    border-bottom: 1px solid var(--border);
+    padding: 10px;
+    text-align: center;
   }
-
-  header nav li:nth-child(odd) {
-    border-right: 1px solid var(--border);
-  }
-
-  header nav li:not(:last-child)::after {
-    display: none;
-  }
-
-  header nav a {
-    padding: 10px 12px;
-    font-size: 0.72rem;
-    text-align: left;
-  }
-}
-
   .agrid {
+    display: grid;
     grid-template-areas:
       "open open"
       "one one"
       "two three"
       "four five";
-
     grid-template-columns: 1fr 1fr;
     gap: 5px;
   }
 }
-
-
 /* Small Screens */
-
 @media screen and (max-width: 480px) {
-  header {
-    border-bottom-color: #ccc;
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
   }
 
+  header {
+    position: static;
+    height: auto;
+
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
+  }
+
+  nav ul {
+    grid-auto-flow: column;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
   .agrid {
+    display: grid;
     grid-template-areas:
       "open"
       "one"
@@ -428,10 +496,10 @@ footer nav a {
       "three"
       "four"
       "five";
-
     grid-template-columns: 1fr;
   }
 }
+
 
 /*  Fonts & Color
       font-family: "legitima", serif;
