@@ -288,12 +288,10 @@ footer {
 }
 .open h1 {
     place-self: center;
-
+    font-size: 5vw;
     font-family: "snell-roundhand-lt-std", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-    font-size: 5rem;
 }
 .open {
     grid-area: open;
