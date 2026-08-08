@@ -196,7 +196,7 @@ main {
 .one {
   grid-area: one;
 
-  background-color: var(--burgundy);
+  background-color: var(--burgundy-dark);
   color: var(--white);
 }
 
