@@ -347,7 +347,21 @@ footer nav a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+/* large */
+@media screen and (min-width: 769px) {
+  .agrid {
+    display: grid;
 
+    grid-template-areas:
+      "open open"
+      "one two"
+      "five five"
+      "three four";
+
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+}
 
 /* Medium Screens */
 
