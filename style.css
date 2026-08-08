@@ -1,1 +1,406 @@
+/* Color Palette */
+:root {
+  --paper: #f5ebdc;
+  --paper-light: #fffdf8;
+  --ink: #292623;
 
+  --burgundy: #9a3f45;
+  --burgundy-dark: #713038;
+
+  --gold: #8a6500;
+
+  --teal: #4d6b73;
+  --teal-dark: #39545a;
+
+  --lavender: #675d95;
+  --lavender-dark: #514875;
+
+  --olive: #66731e;
+  --olive-dark: #4d5817;
+
+  --sage: #5f6f54;
+  --sea: #4e7773;
+
+  --orange: #a35c1e;
+  --taupe: #7d6b4a;
+
+  --white: #fffdf8;
+
+  --border: #d8cdbc;
+}
+
+/* Grid for body */
+body {
+  display: grid;
+  grid-template-areas:
+    "header main"
+    "header footer";
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr auto;
+
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: "filosofia", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+header {
+  grid-area: header;
+  background-color: var(--paper);
+  border-right: 2px solid var(--border);
+  padding: 20px;
+
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--paper-light);
+}
+
+footer {
+  grid-area: footer;
+  background: #ddd;
+  padding: 5px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+/* Grid for main articles */
+.agrid {
+  display: grid;
+  grid-template-areas:
+    "open open"
+    "one two"
+    "five five"
+    "three four";
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+/* main grid Areas */
+
+.open {
+  grid-area: open;
+    background-image:
+    url("images/aview.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  padding: 0px;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.one {
+  grid-area: one;
+  background: red;
+}
+
+.two {
+  grid-area: two;
+  background: yellow;
+}
+
+.three {
+  grid-area: three;
+  background: blue;
+}
+
+.four {
+  grid-area: four;
+  background: green;
+}
+
+.five {
+  grid-area: five;
+  background-image:
+    url("images/Buttermere.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  padding: 30px;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+/* style stuff */
+.agrid article {
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid rgba(41, 38, 35, 0.15);
+    line-height: 1.7;
+    box-shadow: 0 4px 12px rgba(41, 38, 35, 0.08)
+}
+.agrid article h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  font-family: "latienne-pro", Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.agrid article h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+
+  font-family: "legitima", Georgia, serif;
+  font-size: .rem;
+}
+
+.one {
+  grid-area: one;
+  background-color: var(--burgundy);
+  color: var(--white);
+}
+
+.one h2,
+.one h3 {
+  color: var(--white);
+}
+.two {
+  grid-area: two;
+  background-color: #e3dfef;
+  color: var(--ink);
+}
+
+.two h2 {
+  color: var(--lavender-dark);
+}
+
+.two h3 {
+  color: var(--lavender-dark);
+}
+
+.three {
+  grid-area: three;
+  background-color: var(--teal-dark);
+  color: var(--white);
+}
+
+.three h2,
+.three h3 {
+  color: var(--white);
+}
+
+.four {
+  grid-area: four;
+  background-color: var(--olive-dark);
+  color: var(--white);
+}
+
+.four h2,
+.four h3 {
+  color: var(--white);
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--burgundy-dark);
+  text-decoration: none;
+  font-family: "helvetica-lt-pro", Arial, sans-serif;
+  font-weight: 700;
+}
+footer {
+  grid-area: footer;
+  background-color: var(--burgundy-dark);
+  color: var(--white);
+  padding: 15px 25px;
+  margin-top: 2px;
+}
+/* poem */
+.poem {
+    place-self: center;
+}
+.poem ul, .poem ol
+{
+    list-style-type: none;
+}
+.poem li
+{
+  font-family:Times New Roman;
+  font-style:italic;
+  padding-bottom: 0.1em;
+}
+.poem li:first-child::first-letter
+{
+  font-size:26px;
+  font-style:italic;
+  padding-right:3px;
+}
+.poem li:not(:first-child)
+{
+  margin-left: 26px;
+}
+.open h1 {
+    place-self: center;
+    font-family: "snell-roundhand-lt-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    font-size: 5rem;
+}
+/* --- Medium Screens: Tablets (481px to 768px) --- */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  header {
+    position: static;
+    height: auto;
+
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
+  }
+
+  nav ul {
+    grid-auto-flow: column;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  .agrid {
+    display: grid;
+    grid-template-areas:
+      "open open"
+      "one one"
+      "two three"
+      "four five";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+/* Small Screens */
+@media screen and (max-width: 480px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  header {
+    position: static;
+    height: auto;
+
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
+  }
+
+  nav ul {
+    grid-auto-flow: column;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  .agrid {
+    display: grid;
+    grid-template-areas:
+      "open"
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*  Fonts & Color
+      font-family: "legitima", serif;
+      font-weight: 500;
+      font-style: normal;
+
+      font-family: "latienne-pro", serif;
+      font-weight: 700;
+      font-style: normal;
+
+      font-family: "filosofia", serif;
+      font-weight: 400;
+      font-style: normal;
+
+      font-family: "filosofia", serif;
+      font-weight: 700;
+      font-style: normal;
+
+      font-family: "helvetica-lt-pro", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+
+      font-family: "helvetica-lt-pro", sans-serif;
+      font-weight: 400;
+      font-style: normal; 
+
+      font-family: "snell-roundhand-lt-std", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    
+        #9A3F45 — Dusty burgundy
+        #8A6500 — Mustard gold
+        #4D6B73 — Slate teal
+        #675D95 — Muted lavender
+        #66731E — Olive green
+        #5F6F54 — Sage green
+        #4E7773 — Sea green
+        #A35C1E — Burnt orange
+        #7D6B4A — Taupe brown */
