@@ -517,6 +517,14 @@ footer nav a {
   }
 }
 
+.archive-book {
+  display: block;
+  width: 560px;
+  height: 384px;
+  margin: 0 auto;
+  border: 0;
+}
+
 /* --- Medium Screens: Tablets (481px to 768px) --- */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   body {
@@ -602,6 +610,14 @@ footer nav a {
       "five";
     grid-template-columns: 1fr;
   }
+	  .archive-book {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: 384px;
+  margin: 0 auto;
+  border: 0;
+}
 }
 
 
