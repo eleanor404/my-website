@@ -278,6 +278,22 @@ footer {
     
     font-size: 5rem;
 }
+.open {
+    grid-area: open;
+    padding: 0;
+    max-height: 150px;
+
+    background-image: url("images/aview.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /* --- Medium Screens: Tablets (481px to 768px) --- */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   body {
