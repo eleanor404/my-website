@@ -477,6 +477,62 @@ footer nav a {
   margin: 0 auto;
   border: 0;
 }
+/* form styling */
+form {
+    background-color: var(--paper-light);
+    border: 2px solid var(--border);
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+form h3 {
+    color: var(--ink);
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    color: var(--ink);
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.7rem;
+    box-sizing: border-box;
+
+    background-color: var(--white);
+    color: var(--ink);
+
+    border: 1px solid var(--border);
+    font: inherit;
+}
+
+form input:focus,
+form select:focus {
+    outline: 2px solid var(--sage);
+    border-color: var(--sage);
+}
+
+form input[type="submit"] {
+    width: auto;
+    margin-top: 1.25rem;
+    padding: 0.7rem 1.4rem;
+
+    background-color: var(--olive);
+    color: var(--white);
+
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--olive-dark);
+}
 
 /* --- Medium Screens: Tablets (481px to 768px) --- */
 @media screen and (min-width: 481px) and (max-width: 768px) {
